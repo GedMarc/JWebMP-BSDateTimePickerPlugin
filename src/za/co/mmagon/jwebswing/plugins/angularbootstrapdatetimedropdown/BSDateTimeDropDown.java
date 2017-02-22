@@ -59,6 +59,7 @@ public class BSDateTimeDropDown extends BSDropDown
                 addClass("show");
             }
         }
+
         super.preConfigure();
     }
 

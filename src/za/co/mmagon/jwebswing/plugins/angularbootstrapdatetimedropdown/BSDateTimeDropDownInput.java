@@ -142,6 +142,8 @@ public class BSDateTimeDropDownInput
     {
         if (!isConfigured())
         {
+            setNoCaret(true);
+
             getInputComponent().addAttribute(AngularAttributes.ngModel, getVariableName());
             Span iconSpan = new Span();
             Italic icon = new Italic();
