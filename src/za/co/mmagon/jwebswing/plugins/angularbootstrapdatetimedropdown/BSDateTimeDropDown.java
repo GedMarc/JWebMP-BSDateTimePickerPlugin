@@ -15,7 +15,9 @@
  */
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePicker;
+import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
 
 /**
@@ -24,6 +26,8 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
  * @since 07 Feb 2017
  *
  */
+@ComponentInformation(name = "Bootstrap DateTime Dropdown", description = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
+        url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDown extends BSDropDown
 {
 
@@ -39,6 +43,7 @@ public class BSDateTimeDropDown extends BSDropDown
     {
         setDatePicker(new BSDateTimePicker(variableName));
         this.variableName = variableName;
+        BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
     }
 
     @Override
@@ -46,12 +51,13 @@ public class BSDateTimeDropDown extends BSDropDown
     {
         if (!isConfigured())
         {
-            //getDropdownButton().setTag("a");
-            //getDropdownButton().addAttribute("href", "#");
-
             getOptions().setDropdownSelector(getDropdownButton());
             getDatePicker().addAttribute("data-datetimepicker-config", getOptions().toString().replace('\"', '\'').replace("\r", "").replace("\n", "").replace("\t", "").replace("  ", ""));
 
+            if (BootstrapPageConfigurator.isBootstrap4())
+            {
+                addClass("show");
+            }
         }
         super.preConfigure();
     }

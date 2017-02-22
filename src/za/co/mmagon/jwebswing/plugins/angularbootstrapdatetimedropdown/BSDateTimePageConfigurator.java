@@ -15,9 +15,12 @@
  */
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
+import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimePickerInputAngularModule;
+import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
 
 /**
  *
@@ -47,10 +50,16 @@ public class BSDateTimePageConfigurator extends PageConfigurator
         {
             if (page.getBody().readChildrenPropertyFirstResult(BSDateTimeEnabled, true))
             {
-
+                page.getAngular().getAngularModules().add(new BSDateTimePickerAngularModule(page.getBody()));
+                page.getAngular().getAngularModules().add(new BSDateTimePickerInputAngularModule(page.getBody()));
             }
         }
 
         return page;
+    }
+
+    public static void setBSDateTimeRequired(Component component, boolean required)
+    {
+        component.getProperties().put(BSDateTimeEnabled, true);
     }
 }

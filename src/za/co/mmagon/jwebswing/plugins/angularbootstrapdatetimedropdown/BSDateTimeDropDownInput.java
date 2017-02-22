@@ -18,6 +18,7 @@ package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
 import za.co.mmagon.jwebswing.base.html.Italic;
 import za.co.mmagon.jwebswing.base.html.Span;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimeInput;
 import za.co.mmagon.jwebswing.plugins.bootstrap.Glyphicons;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
@@ -30,6 +31,8 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGro
  * @since 07 Feb 2017
  *
  */
+@ComponentInformation(name = "Bootstrap DateTime Input", description = "Displays a drop down with the date time input and a selector for the date time picker ",
+        url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDownInput
         extends BSDateTimeDropDown implements BSDropDownMenuChildren
 {
