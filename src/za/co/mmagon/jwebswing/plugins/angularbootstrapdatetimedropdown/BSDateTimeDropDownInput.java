@@ -18,11 +18,11 @@ package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
 import za.co.mmagon.jwebswing.base.html.Italic;
 import za.co.mmagon.jwebswing.base.html.Span;
-import za.co.mmagon.jwebswing.components.bootstrap.Glyphicons;
-import za.co.mmagon.jwebswing.components.bootstrap.dropdown.menu.BSDropDownMenuChildren;
-import za.co.mmagon.jwebswing.components.bootstrap.forms.groups.sets.BSComponentInputGroupOptions;
-import za.co.mmagon.jwebswing.components.bootstrap.forms.groups.sets.BSFormInputGroup;
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimeInput;
+import za.co.mmagon.jwebswing.plugins.bootstrap.Glyphicons;
+import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
+import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSComponentInputGroupOptions;
+import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGroup;
 
 /**
  *
@@ -119,7 +119,7 @@ public class BSDateTimeDropDownInput
     {
         if (inputComponent == null)
         {
-            setInputComponent(new BSDateTimeInput("YYYY-MMM-DD HH:mm:SS"));
+            setInputComponent(new BSDateTimeInput("YYYY-MMM-DD HH:mm:SS", "dummy.date"));
         }
         return inputComponent;
     }
@@ -147,13 +147,11 @@ public class BSDateTimeDropDownInput
                 iconSpan.add(icon);
                 icon.addClass(getIconClass());
                 //iconSpan.addClass(BSComponentInputGroupOptions.Input_Group_Addon.toString());
-                iconSpan.addClass("btn btn-outline-success");
-                iconSpan.addClass("rounded-0");
-                iconSpan.addClass("rounded-right");
-                iconSpan.addAttribute("style", "line-height:2;");
+                iconSpan.addClass("input-group-addon");
+                //iconSpan.addAttribute("style", "line-height:2;");
             }
             getInputGroup().add(iconSpan);
-            getDropdownButton().removeClass("btn");
+            //getDropdownButton().removeClass("btn");
             getDropdownButton().add(getInputGroup());
 
         }

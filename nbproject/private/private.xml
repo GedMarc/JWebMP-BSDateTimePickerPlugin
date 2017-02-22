@@ -5,7 +5,16 @@
         <group name="JWebSwingStaticPage"/>
         <group name="JWebswing Static"/>
         <group name="JWebSwing">
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimedropdown/BSDateTimeDropDown.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimepicker/BSDateTimePicker.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/test/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimedropdown/BSDateTimeDropDownTest.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimepicker/BSDateTimePickerAngularModule.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimedropdown/BSDateTimeDropDownInput.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimeinput/BSDateTimePickerInputAngularModule.java</file>
             <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/test/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimepicker/BootstrapDateTimeInputTest.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimeinput/BSDateTimeInput.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimeinput/BSDateTimeInputAttributes.java</file>
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimedropdown/BSDateTimePickerConfigOptions.java</file>
         </group>
     </open-files>
 </project-private>

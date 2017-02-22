@@ -16,7 +16,7 @@
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.components.bootstrap.dropdown.BSDropDownOptions;
+import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
 /**
  *
@@ -24,7 +24,7 @@ import za.co.mmagon.jwebswing.components.bootstrap.dropdown.BSDropDownOptions;
  * @since 07 Feb 2017
  *
  */
-public class BSDateTimePickerConfigOptions extends BSDropDownOptions
+public class BSDateTimePickerConfigOptions extends JavaScriptPart
 {
 
     private static final long serialVersionUID = 1L;
@@ -39,11 +39,8 @@ public class BSDateTimePickerConfigOptions extends BSDropDownOptions
      * <p>
      * The view that the datetimepicker should show when it is opened. Accepts values of :
      * <p>
-     * 'minute' for the minute view
-     * 'hour' for the hour view
-     * 'day' for the day view (the default)
-     * 'month' for the 12-month view
-     * 'year' for the 10-year overview. Useful for date-of-birth datetimepickers.
+     * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+     * datetimepickers.
      * <p>
      */
     private String startView;
@@ -113,11 +110,8 @@ public class BSDateTimePickerConfigOptions extends BSDropDownOptions
      * <p>
      * The view that the datetimepicker should show when it is opened. Accepts values of :
      * <p>
-     * 'minute' for the minute view
-     * 'hour' for the hour view
-     * 'day' for the day view (the default)
-     * 'month' for the 12-month view
-     * 'year' for the 10-year overview. Useful for date-of-birth datetimepickers.
+     * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+     * datetimepickers.
      *
      * @return
      */
@@ -133,11 +127,8 @@ public class BSDateTimePickerConfigOptions extends BSDropDownOptions
      * <p>
      * The view that the datetimepicker should show when it is opened. Accepts values of :
      * <p>
-     * 'minute' for the minute view
-     * 'hour' for the hour view
-     * 'day' for the day view (the default)
-     * 'month' for the 12-month view
-     * 'year' for the 10-year overview. Useful for date-of-birth datetimepickers.
+     * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+     * datetimepickers.
      *
      * @param startView
      */

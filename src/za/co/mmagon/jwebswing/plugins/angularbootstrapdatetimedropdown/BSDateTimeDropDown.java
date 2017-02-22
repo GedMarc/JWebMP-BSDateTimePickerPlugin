@@ -15,8 +15,8 @@
  */
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
-import za.co.mmagon.jwebswing.components.bootstrap.dropdown.BSDropDown;
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePicker;
+import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
 
 /**
  *
@@ -46,8 +46,8 @@ public class BSDateTimeDropDown extends BSDropDown
     {
         if (!isConfigured())
         {
-            getDropdownButton().setTag("a");
-            getDropdownButton().addAttribute("href", "#");
+            //getDropdownButton().setTag("a");
+            //getDropdownButton().addAttribute("href", "#");
 
             getOptions().setDropdownSelector(getDropdownButton());
             getDatePicker().addAttribute("data-datetimepicker-config", getOptions().toString().replace('\"', '\'').replace("\r", "").replace("\n", "").replace("\t", "").replace("  ", ""));

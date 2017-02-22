@@ -17,9 +17,9 @@
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
 
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.components.bootstrap.dropdown.menu.BSDropDownMenuChildren;
-import za.co.mmagon.jwebswing.components.bootstrap.forms.controls.BSInput;
-import za.co.mmagon.jwebswing.components.moment.MomentAngularModule;
+import za.co.mmagon.jwebswing.plugins.moment.MomentAngularModule;
+import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
+import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
 
 /**
  * An implementation of
