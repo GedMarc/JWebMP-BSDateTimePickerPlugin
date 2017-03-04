@@ -5,5 +5,8 @@
         <group name="JWebSwingStaticPage"/>
         <group name="JWebswing Static"/>
         <group name="JWebSwing"/>
+        <group name="JWebSwing Plugins">
+            <file>file:/C:/AESoft/Programs/JWebSwingPlugins/BSDateTimePickerPlugin/src/za/co/mmagon/jwebswing/plugins/angularbootstrapdatetimedropdown/BSDateTimePageConfigurator.java</file>
+        </group>
     </open-files>
 </project-private>
