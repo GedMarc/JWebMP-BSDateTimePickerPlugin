@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimeP
  * @since 22 Feb 2017
  *
  */
-@PluginInformation(pluginName = "Bootstrap Angular Date Time Picker",
+@PluginInformation(pluginName = "BS Date Time Picker",
                    pluginUniqueName = "bootstrap-datepicker",
                    pluginDescription = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
                    pluginVersion = "BS 3.3.7 / 4a6",
