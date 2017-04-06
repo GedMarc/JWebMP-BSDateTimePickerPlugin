@@ -46,7 +46,7 @@ public class BSDateTimeInput<J extends BSDateTimeInput>
     public BSDateTimeInput(String dateDisplayFormat, String variableName)
     {
         addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
-        AngularPageConfigurator.setAngularRequired(this, true);
+        AngularPageConfigurator.setRequired(this, true);
         BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
         bind(variableName);
     }
