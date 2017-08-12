@@ -15,8 +15,6 @@
  */
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
-import org.junit.Test;
-
 /**
  *
  * @author GedMarc
@@ -26,13 +24,6 @@ public class BSDateTimeDropDownInputTest
 
     public BSDateTimeDropDownInputTest()
     {
-    }
-
-    @Test
-    public void testSomeMethod()
-    {
-        BSDateTimeDropDownInput input = new BSDateTimeDropDownInput("date.date", null);
-        System.out.println(input.toString(true));
     }
 
 }
