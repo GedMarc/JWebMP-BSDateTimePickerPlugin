@@ -19,51 +19,50 @@ package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 
 /**
- *
  * @author GedMarc
  */
 public enum BSDateTimePickerAttributes implements AttributeDefinitions
 {
-    Visibility;
-
-    private boolean isKeyword;
-
-    /**
-     * The component attributes
-     */
-    private BSDateTimePickerAttributes()
-    {
-    }
-
-    /**
-     * If the attribute is loaded as a keyword only
-     *
-     * @param isKeyword
-     */
-    private BSDateTimePickerAttributes(boolean isKeyword)
-    {
-        this.isKeyword = isKeyword;
-    }
-
-    /**
-     * If the attribute is a keyword
-     *
-     * @return
-     */
-    @Override
-    public boolean isKeyword()
-    {
-        return isKeyword;
-    }
-
-    /**
-     * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-     *
-     * @return
-     */
-    @Override
-    public String toString()
-    {
-        return name().toLowerCase().replace('_', '-').replace("$", "");
-    }
+	Visibility;
+	
+	private boolean isKeyword;
+	
+	/**
+	 * The component attributes
+	 */
+	BSDateTimePickerAttributes()
+	{
+	}
+	
+	/**
+	 * If the attribute is loaded as a keyword only
+	 *
+	 * @param isKeyword
+	 */
+	BSDateTimePickerAttributes(boolean isKeyword)
+	{
+		this.isKeyword = isKeyword;
+	}
+	
+	/**
+	 * If the attribute is a keyword
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isKeyword()
+	{
+		return isKeyword;
+	}
+	
+	/**
+	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
+	 *
+	 * @return
+	 */
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase().replace('_', '-').replace("$", "");
+	}
 }

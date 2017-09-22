@@ -22,44 +22,43 @@ import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown.BSDateTim
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
 
 /**
- *
- * @author GedMarc
  * @param <J>
  *
+ * @author GedMarc
  * @since 27 Jan 2017
- *
  */
 @ComponentInformation(name = "Bootstrap DateTime Input", description = "Allows user input of a date/time value. Valid dates are displayed in specified format, but input may be in any supported format. ",
-        url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+		url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeInput<J extends BSDateTimeInput>
-        extends BSInput
+		extends BSInput
 {
-
-    private static final long serialVersionUID = 1L;
-
-    /**
-     * The default date time input with the given display format (required)
-     *
-     * @param dateDisplayFormat
-     * @param variableName
-     */
-    public BSDateTimeInput(String dateDisplayFormat, String variableName)
-    {
-        addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
-        AngularPageConfigurator.setRequired(this, true);
-        BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
-        bind(variableName);
-    }
-
-    /**
-     * Sets the display form of this input
-     *
-     * @param dateDisplayFormat
-     * @return
-     */
-    public J setDisplayForm(String dateDisplayFormat)
-    {
-        addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
-        return (J) this;
-    }
+	
+	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * The default date time input with the given display format (required)
+	 *
+	 * @param dateDisplayFormat
+	 * @param variableName
+	 */
+	public BSDateTimeInput(String dateDisplayFormat, String variableName)
+	{
+		addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
+		AngularPageConfigurator.setRequired(this, true);
+		BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
+		bind(variableName);
+	}
+	
+	/**
+	 * Sets the display form of this input
+	 *
+	 * @param dateDisplayFormat
+	 *
+	 * @return
+	 */
+	public J setDisplayForm(String dateDisplayFormat)
+	{
+		addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
+		return (J) this;
+	}
 }

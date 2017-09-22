@@ -27,141 +27,139 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGro
 import za.co.mmagon.jwebswing.plugins.glyphicons.Glyphicons;
 
 /**
- *
  * @author GedMarc
  * @since 07 Feb 2017
- *
  */
 @ComponentInformation(name = "Bootstrap DateTime Input", description = "Displays a drop down with the date time input and a selector for the date time picker ",
-        url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+		url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDownInput
-        extends BSDateTimeDropDown implements BSDropDownMenuChildren
+		extends BSDateTimeDropDown implements BSDropDownMenuChildren
 {
-
-    private static final long serialVersionUID = 1L;
-    /**
-     * The input group
-     */
-    private BSFormInputGroup inputGroup;
-    /**
-     * The actual input component
-     */
-    private BSDateTimeInput inputComponent;
-    /**
-     * The icon to apply to the input. defaults to glyphicon calendar
-     */
-    private String iconClass;
-    /**
-     * Any input group options
-     */
-    private final BSComponentInputGroupOptions[] inputGroupOptions;
-
-    /**
-     * Creates an input with the given input and options
-     *
-     * @param variableName
-     * @param iconClass
-     * @param inputGroupOptions
-     */
-    public BSDateTimeDropDownInput(String variableName, String iconClass, BSComponentInputGroupOptions... inputGroupOptions)
-    {
-        super(variableName);
-        this.iconClass = iconClass;
-        this.inputGroupOptions = inputGroupOptions == null ? new BSComponentInputGroupOptions[0] : inputGroupOptions;
-    }
-
-    /**
-     * The input group required
-     *
-     * @return
-     */
-    public BSFormInputGroup getInputGroup()
-    {
-        if (inputGroup == null)
-        {
-            this.inputGroup = new BSFormInputGroup(getInputComponent(), inputGroupOptions);
-        }
-        return inputGroup;
-    }
-
-    /**
-     * Sets the input group required
-     *
-     * @param inputGroup
-     */
-    public void setInputGroup(BSFormInputGroup inputGroup)
-    {
-        this.inputGroup = inputGroup;
-    }
-
-    /**
-     * Gets the icon class
-     *
-     * @return
-     */
-    public String getIconClass()
-    {
-        return iconClass == null ? Glyphicons.calendar.toString() : iconClass;
-    }
-
-    /**
-     * Sets the icon class
-     *
-     * @param iconClass
-     */
-    public void setIconClass(String iconClass)
-    {
-        this.iconClass = iconClass;
-    }
-
-    /**
-     * Gets the input component. never null
-     *
-     * @return
-     */
-    public BSDateTimeInput getInputComponent()
-    {
-        if (inputComponent == null)
-        {
-            setInputComponent(new BSDateTimeInput("YYYY-MMM-DD HH:mm:SS", "dummy.date"));
-        }
-        return inputComponent;
-    }
-
-    /**
-     * Sets the input component with the relevant properties
-     *
-     * @param inputComponent
-     */
-    public void setInputComponent(BSDateTimeInput inputComponent)
-    {
-        this.inputComponent = inputComponent;
-    }
-
-    @Override
-    public void preConfigure()
-    {
-        if (!isConfigured())
-        {
-            setNoCaret(true);
-
-            getInputComponent().addAttribute(AngularAttributes.ngModel, getVariableName());
-            Span iconSpan = new Span();
-            Italic icon = new Italic();
-            if (getIconClass() != null)
-            {
-                iconSpan.add(icon);
-                icon.addClass(getIconClass());
-                //iconSpan.addClass(BSComponentInputGroupOptions.Input_Group_Addon.toString());
-                iconSpan.addClass("input-group-addon");
-                //iconSpan.addAttribute("style", "line-height:2;");
-            }
-            getInputGroup().add(iconSpan);
-            //getDropdownButton().removeClass("btn");
-            getDropdownButton().add(getInputGroup());
-
-        }
-        super.preConfigure();
-    }
+	
+	private static final long serialVersionUID = 1L;
+	/**
+	 * Any input group options
+	 */
+	private final BSComponentInputGroupOptions[] inputGroupOptions;
+	/**
+	 * The input group
+	 */
+	private BSFormInputGroup inputGroup;
+	/**
+	 * The actual input component
+	 */
+	private BSDateTimeInput inputComponent;
+	/**
+	 * The icon to apply to the input. defaults to glyphicon calendar
+	 */
+	private String iconClass;
+	
+	/**
+	 * Creates an input with the given input and options
+	 *
+	 * @param variableName
+	 * @param iconClass
+	 * @param inputGroupOptions
+	 */
+	public BSDateTimeDropDownInput(String variableName, String iconClass, BSComponentInputGroupOptions... inputGroupOptions)
+	{
+		super(variableName);
+		this.iconClass = iconClass;
+		this.inputGroupOptions = inputGroupOptions == null ? new BSComponentInputGroupOptions[0] : inputGroupOptions;
+	}
+	
+	/**
+	 * The input group required
+	 *
+	 * @return
+	 */
+	public BSFormInputGroup getInputGroup()
+	{
+		if (inputGroup == null)
+		{
+			this.inputGroup = new BSFormInputGroup(getInputComponent(), inputGroupOptions);
+		}
+		return inputGroup;
+	}
+	
+	/**
+	 * Sets the input group required
+	 *
+	 * @param inputGroup
+	 */
+	public void setInputGroup(BSFormInputGroup inputGroup)
+	{
+		this.inputGroup = inputGroup;
+	}
+	
+	/**
+	 * Gets the icon class
+	 *
+	 * @return
+	 */
+	public String getIconClass()
+	{
+		return iconClass == null ? Glyphicons.calendar.toString() : iconClass;
+	}
+	
+	/**
+	 * Sets the icon class
+	 *
+	 * @param iconClass
+	 */
+	public void setIconClass(String iconClass)
+	{
+		this.iconClass = iconClass;
+	}
+	
+	/**
+	 * Gets the input component. never null
+	 *
+	 * @return
+	 */
+	public BSDateTimeInput getInputComponent()
+	{
+		if (inputComponent == null)
+		{
+			setInputComponent(new BSDateTimeInput("YYYY-MMM-DD HH:mm:SS", "dummy.date"));
+		}
+		return inputComponent;
+	}
+	
+	/**
+	 * Sets the input component with the relevant properties
+	 *
+	 * @param inputComponent
+	 */
+	public void setInputComponent(BSDateTimeInput inputComponent)
+	{
+		this.inputComponent = inputComponent;
+	}
+	
+	@Override
+	public void preConfigure()
+	{
+		if (!isConfigured())
+		{
+			setNoCaret(true);
+			
+			getInputComponent().addAttribute(AngularAttributes.ngModel, getVariableName());
+			Span iconSpan = new Span();
+			Italic icon = new Italic();
+			if (getIconClass() != null)
+			{
+				iconSpan.add(icon);
+				icon.addClass(getIconClass());
+				//iconSpan.addClass(BSComponentInputGroupOptions.Input_Group_Addon.toString());
+				iconSpan.addClass("input-group-addon");
+				//iconSpan.addAttribute("style", "line-height:2;");
+			}
+			getInputGroup().add(iconSpan);
+			//getDropdownButton().removeClass("btn");
+			getDropdownButton().add(getInputGroup());
+			
+		}
+		super.preConfigure();
+	}
 
 }

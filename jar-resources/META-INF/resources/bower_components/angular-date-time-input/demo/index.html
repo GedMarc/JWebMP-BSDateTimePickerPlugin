@@ -111,21 +111,21 @@
     </div>
 
     <div class="form-group well">
-            <div class="dropdown">
-                <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#"
-                   href="#">
-                    <div class="input-group">
-                        <input type="text" class="form-control"
-                               data-date-time-input="M/D/YYYY h:mm A"
-                               data-ng-model="data.dateDropDown">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    </div>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <datetimepicker data-ng-model="data.dateDropDown"
-                                    data-datetimepicker-config="{ dropdownSelector: '#dropdown1' }"></datetimepicker>
-                </ul>
-            </div>
+        <div class="dropdown">
+            <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#"
+               href="#">
+                <div class="input-group">
+                    <input type="text" class="form-control"
+                           data-date-time-input="M/D/YYYY h:mm A"
+                           data-ng-model="data.dateDropDown">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                </div>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <datetimepicker data-ng-model="data.dateDropDown"
+                                data-datetimepicker-config="{ dropdownSelector: '#dropdown1' }"></datetimepicker>
+            </ul>
+        </div>
 
         <p class="help-block">
             Input format is 'M/D/YYYY h:mm A'.

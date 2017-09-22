@@ -9,7 +9,8 @@
             <th class="switch"
                 colspan="5"
                 data-ng-show="data.previousViewDate.selectable"
-                data-ng-click="changeView(data.previousView, data.previousViewDate, $event)">{{ data.previousViewDate.display }}</th>
+                data-ng-click="changeView(data.previousView, data.previousViewDate, $event)">{{ data.previousViewDate.display }}
+            </th>
             <th class="right" data-ng-click="changeView(data.currentView, data.rightDate, $event)"
                 data-ng-show="data.rightDate.selectable"><i class="glyphicon glyphicon-arrow-right"><span
                     class="sr-only">{{ screenReader.next }}</span></i>
@@ -31,7 +32,8 @@
             <td data-ng-repeat="dateObject in week.dates"
                 data-ng-click="changeView(data.nextView, dateObject, $event)"
                 class="day"
-                data-ng-class="{current: dateObject.current, active: dateObject.active, past: dateObject.past, future: dateObject.future, disabled: !dateObject.selectable}">{{ dateObject.display }}</td>
+                data-ng-class="{current: dateObject.current, active: dateObject.active, past: dateObject.past, future: dateObject.future, disabled: !dateObject.selectable}">{{ dateObject.display }}
+            </td>
         </tr>
         </tbody>
     </table>

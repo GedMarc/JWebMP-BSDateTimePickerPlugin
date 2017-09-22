@@ -24,54 +24,52 @@ import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimePi
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
 
 /**
- *
  * @author GedMarc
  * @since 22 Feb 2017
- *
  */
 @PluginInformation(pluginName = "BS Date Time Picker",
-                   pluginUniqueName = "bootstrap-datepicker",
-                   pluginDescription = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
-                   pluginVersion = "BS 3.3.7 / 4a6",
-                   pluginDependancyUniqueIDs = "jquery,bootstrap,angular,moment,glyphicons",
-                   pluginCategories = "bootstrap,web ui,ui,framework,date picker",
-                   pluginSubtitle = "A Bootstrap Date Time Picker controlled by Angular for intuitive data transfer and customized calendar templates.",
-                   pluginGitUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin",
-                   pluginSourceUrl = "https://dalelotts.github.io/angular-bootstrap-datetimepicker/",
-                   pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki",
-                   pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BSDateTimePickerPlugin.jar/download",
-                   pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
-                   pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
-                   pluginLastUpdatedDate = "2017/03/04"
+		pluginUniqueName = "bootstrap-datepicker",
+		pluginDescription = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
+		pluginVersion = "BS 3.3.7 / 4a6",
+		pluginDependancyUniqueIDs = "jquery,bootstrap,angular,moment,glyphicons",
+		pluginCategories = "bootstrap,web ui,ui,framework,date picker",
+		pluginSubtitle = "A Bootstrap Date Time Picker controlled by Angular for intuitive data transfer and customized calendar templates.",
+		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin",
+		pluginSourceUrl = "https://dalelotts.github.io/angular-bootstrap-datetimepicker/",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki",
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BSDateTimePickerPlugin.jar/download",
+		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
+		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
+		pluginLastUpdatedDate = "2017/03/04"
 )
 public class BSDateTimePageConfigurator extends PageConfigurator
 {
-
-    public static final String BSDateTimeEnabled = "bs-datetime-enabled";
-    private static final long serialVersionUID = 1L;
-
-    public BSDateTimePageConfigurator()
-    {
-
-    }
-
-    @Override
-    public Page configure(Page page)
-    {
-        if (!page.isConfigured())
-        {
-            if (page.getBody().readChildrenPropertyFirstResult(BSDateTimeEnabled, true))
-            {
-                page.getAngular().getAngularModules().add(new BSDateTimePickerAngularModule(page.getBody()));
-                page.getAngular().getAngularModules().add(new BSDateTimePickerInputAngularModule(page.getBody()));
-            }
-        }
-
-        return page;
-    }
-
-    public static void setBSDateTimeRequired(Component component, boolean required)
-    {
-        component.getProperties().put(BSDateTimeEnabled, true);
-    }
+	
+	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
+	private static final long serialVersionUID = 1L;
+	
+	public BSDateTimePageConfigurator()
+	{
+	
+	}
+	
+	public static void setBSDateTimeRequired(Component component, boolean required)
+	{
+		component.getProperties().put(BSDateTimeEnabled, true);
+	}
+	
+	@Override
+	public Page configure(Page page)
+	{
+		if (!page.isConfigured())
+		{
+			if (page.getBody().readChildrenPropertyFirstResult(BSDateTimeEnabled, true))
+			{
+				page.getAngular().getAngularModules().add(new BSDateTimePickerAngularModule(page.getBody()));
+				page.getAngular().getAngularModules().add(new BSDateTimePickerInputAngularModule(page.getBody()));
+			}
+		}
+		
+		return page;
+	}
 }

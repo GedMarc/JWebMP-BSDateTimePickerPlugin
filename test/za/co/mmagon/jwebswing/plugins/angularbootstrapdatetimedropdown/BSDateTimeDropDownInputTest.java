@@ -16,14 +16,13 @@
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
 
 /**
- *
  * @author GedMarc
  */
 public class BSDateTimeDropDownInputTest
 {
-
-    public BSDateTimeDropDownInputTest()
-    {
-    }
+	
+	public BSDateTimeDropDownInputTest()
+	{
+	}
 
 }

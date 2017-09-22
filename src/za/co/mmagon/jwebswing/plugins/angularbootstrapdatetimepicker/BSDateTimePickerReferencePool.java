@@ -28,84 +28,84 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum BSDateTimePickerReferencePool implements ReferencePool
 {
-    BootstrapDateTimePickerReference(new JavascriptReference("datetimepickerref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"),
-            new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css")),
-    BootstrapDateTimeInputReference(new JavascriptReference("datetimepickerinputref", 1.0, "bower_components/angular-date-time-input/src/dateTimeInput.js"),
-            //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
-            null),
-    BootstrapDateTimeInputTemplatesReference(new JavascriptReference("datetimepickertemplateref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"),
-            //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
-            null),
-    NoReference(null, null);
-    /**
-     * The actual javascript
-     */
-    private JavascriptReference javaScriptReference;
-    /**
-     * The actual css reference
-     */
-    private CSSReference cssReference;
-
-    /**
-     * Constructs a reference pool
-     */
-    private BSDateTimePickerReferencePool()
-    {
-    }
-
-    /**
-     * Constructs a new reference pool
-     *
-     * @param javaScriptReference
-     * @param cssReference
-     */
-    private BSDateTimePickerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-        this.cssReference = cssReference;
-    }
-
-    /**
-     * Returns the javascript reference
-     *
-     * @return
-     */
-    @Override
-    public JavascriptReference getJavaScriptReference()
-    {
-        return javaScriptReference;
-    }
-
-    /**
-     * Sets the javascript reference
-     *
-     * @param javaScriptReference
-     */
-    @Override
-    public void setJavaScriptReference(JavascriptReference javaScriptReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-    }
-
-    /**
-     * Gets the cSS reference
-     *
-     * @return
-     */
-    @Override
-    public CSSReference getCssReference()
-    {
-        return cssReference;
-    }
-
-    /**
-     * Sets the CSS Reference
-     *
-     * @param cssReference
-     */
-    @Override
-    public void setCssReference(CSSReference cssReference)
-    {
-        this.cssReference = cssReference;
-    }
+	BootstrapDateTimePickerReference(new JavascriptReference("datetimepickerref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"),
+	                                 new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css")),
+	BootstrapDateTimeInputReference(new JavascriptReference("datetimepickerinputref", 1.0, "bower_components/angular-date-time-input/src/dateTimeInput.js"),
+	                                //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
+	                                null),
+	BootstrapDateTimeInputTemplatesReference(new JavascriptReference("datetimepickertemplateref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"),
+	                                         //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
+	                                         null),
+	NoReference(null, null);
+	/**
+	 * The actual javascript
+	 */
+	private JavascriptReference javaScriptReference;
+	/**
+	 * The actual css reference
+	 */
+	private CSSReference cssReference;
+	
+	/**
+	 * Constructs a reference pool
+	 */
+	BSDateTimePickerReferencePool()
+	{
+	}
+	
+	/**
+	 * Constructs a new reference pool
+	 *
+	 * @param javaScriptReference
+	 * @param cssReference
+	 */
+	BSDateTimePickerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+		this.cssReference = cssReference;
+	}
+	
+	/**
+	 * Returns the javascript reference
+	 *
+	 * @return
+	 */
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
+	
+	/**
+	 * Sets the javascript reference
+	 *
+	 * @param javaScriptReference
+	 */
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+	}
+	
+	/**
+	 * Gets the cSS reference
+	 *
+	 * @return
+	 */
+	@Override
+	public CSSReference getCssReference()
+	{
+		return cssReference;
+	}
+	
+	/**
+	 * Sets the CSS Reference
+	 *
+	 * @param cssReference
+	 */
+	@Override
+	public void setCssReference(CSSReference cssReference)
+	{
+		this.cssReference = cssReference;
+	}
 }

@@ -8,12 +8,12 @@
  * @since 9/11/16.
  */
 
-var path = require('path')
+var path = require('path');
 
 module.exports = {
-  entry: [path.join(__dirname, 'app.js')],
-  output: {
-    path: __dirname,
-    filename: 'bundle.js'
-  }
+    entry: [path.join(__dirname, 'app.js')],
+    output: {
+        path: __dirname,
+        filename: 'bundle.js'
+    }
 };

@@ -24,98 +24,99 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
 /**
  * An implementation of
  * <p>
- * @author Marc Magon
+ *
  * @param <J>
  *
- * @since 17 Jan 2017
+ * @author Marc Magon
  * @version 1.0
+ * @since 17 Jan 2017
  */
 public class BSDateTimePicker<J extends BSDateTimePicker>
-        extends BSInput//<BSDateTimePickerChildren, BSDateTimePickerAttributes, BSDateTimePickerFeatures, BSDateTimePickerEvents, J>
-        implements BSDropDownMenuChildren
+		extends BSInput//<BSDateTimePickerChildren, BSDateTimePickerAttributes, BSDateTimePickerFeatures, BSDateTimePickerEvents, J>
+		implements BSDropDownMenuChildren
 {
-
-    private static final long serialVersionUID = 1L;
-    /**
-     * The associated feature
-     */
-    private BSDateTimePickerFeature feature;
-
-    /**
-     * Constructs a new instance
-     *
-     * @param variableName
-     */
-    public BSDateTimePicker(String variableName)
-    {
-        setTag("datetimepicker");
-        addAttribute(AngularAttributes.ngModel, variableName);
-        BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
-        //setInlineClosingTag(true);
-    }
-
-    /**
-     * Sets this picker as required
-     *
-     * @param required
-     *
-     * @return
-     */
-    public J setRequired(boolean required)
-    {
-        addAttribute(AngularAttributes.ngRequired, required + "");
-        return (J) this;
-    }
-
-    /**
-     * Returns the feature if any is required
-     *
-     * @return
-     */
-    public final BSDateTimePickerFeature getFeature()
-    {
-        if (feature == null)
-        {
-            feature = new BSDateTimePickerFeature(this);
-        }
-        return feature;
-    }
-
-    /**
-     * Returns the options if any is required
-     *
-     * @return
-     */
-    @Override
-    public BSDateTimePickerOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
-
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-        {
-            return true;
-        }
-        if (obj == null)
-        {
-            return false;
-        }
-        if (getClass() != obj.getClass())
-        {
-            return false;
-        }
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode()
-    {
-        int hash = 7;
-        hash = 79 * hash + (this.getID().hashCode());
-        return hash;
-    }
+	
+	private static final long serialVersionUID = 1L;
+	/**
+	 * The associated feature
+	 */
+	private BSDateTimePickerFeature feature;
+	
+	/**
+	 * Constructs a new instance
+	 *
+	 * @param variableName
+	 */
+	public BSDateTimePicker(String variableName)
+	{
+		setTag("datetimepicker");
+		addAttribute(AngularAttributes.ngModel, variableName);
+		BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
+		//setInlineClosingTag(true);
+	}
+	
+	/**
+	 * Sets this picker as required
+	 *
+	 * @param required
+	 *
+	 * @return
+	 */
+	public J setRequired(boolean required)
+	{
+		addAttribute(AngularAttributes.ngRequired, required + "");
+		return (J) this;
+	}
+	
+	/**
+	 * Returns the feature if any is required
+	 *
+	 * @return
+	 */
+	public final BSDateTimePickerFeature getFeature()
+	{
+		if (feature == null)
+		{
+			feature = new BSDateTimePickerFeature(this);
+		}
+		return feature;
+	}
+	
+	/**
+	 * Returns the options if any is required
+	 *
+	 * @return
+	 */
+	@Override
+	public BSDateTimePickerOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+		{
+			return true;
+		}
+		if (obj == null)
+		{
+			return false;
+		}
+		if (getClass() != obj.getClass())
+		{
+			return false;
+		}
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		int hash = 7;
+		hash = 79 * hash + (this.getID().hashCode());
+		return hash;
+	}
 
 }
