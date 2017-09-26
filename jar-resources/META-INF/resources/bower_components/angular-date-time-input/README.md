@@ -85,7 +85,7 @@ Apply the directive to your form elements:
 
 The value of the date-time-input attribute is the format the date values will be displayed.
 
-Nota bene: The value saved in the model is, by default, a JavaScript ```Date``` object, not a string.
+Nota bene: The value 
 This can result in differences between what is seen in the model and what is displayed.
 
 ### date-time-input
