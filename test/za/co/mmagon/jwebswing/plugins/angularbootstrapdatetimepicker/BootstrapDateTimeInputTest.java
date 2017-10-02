@@ -7,7 +7,7 @@ package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
 
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimeInput;
+import za.co.mmagon.jwebswing.plugins.bs4datetimedropdown.BSDateTimeInput;
 
 /**
  * @author GedMarc

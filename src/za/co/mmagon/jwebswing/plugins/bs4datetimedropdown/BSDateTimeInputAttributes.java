@@ -14,30 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput;
+package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.base.angular.modules.AngularModuleBase;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
+import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 
 /**
  * @author GedMarc
  * @since 27 Jan 2017
  */
-public class BSDateTimePickerInputAngularModule extends AngularModuleBase
+public enum BSDateTimeInputAttributes implements AttributeDefinitions
 {
+	Date_Time_Input,;
 	
-	private static final long serialVersionUID = 1L;
-	
-	public BSDateTimePickerInputAngularModule(ComponentHierarchyBase page)
+	BSDateTimeInputAttributes()
 	{
-		super("ui.dateTimeInput");
-		page.getJavascriptReferences().add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
+	
 	}
 	
 	@Override
-	public String renderFunction()
+	public String toString()
 	{
-		return "";
+		return "data-" + super.toString().toLowerCase().replace('_', '-');
 	}
+	
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
+
 }

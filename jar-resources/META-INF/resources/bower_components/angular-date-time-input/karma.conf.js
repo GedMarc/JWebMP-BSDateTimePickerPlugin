@@ -13,85 +13,85 @@
  *    @since        7/21/13
  */
 
-var paths = require('./paths');
+var paths = require('./paths')
 
 module.exports = function (config) {
-    'use strict';
+  'use strict'
 
-    config.set({
+  config.set({
 
-        frameworks: ['jasmine'],
+    frameworks: ['jasmine'],
 
-        plugins: [
-            'karma-jasmine',
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-phantomjs-launcher',
-            'karma-coverage',
-            'karma-threshold-reporter'
-        ],
+    plugins: [
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-phantomjs-launcher',
+      'karma-coverage',
+      'karma-threshold-reporter'
+    ],
 
-        files: paths.all,
+    files: paths.all,
 
-        // list of files to exclude
-        exclude: [],
+    // list of files to exclude
+    exclude: [],
 
-        preprocessors: {
-            'src/**/*.js': ['coverage']
-        },
+    preprocessors: {
+      'src/**/*.js': ['coverage']
+    },
 
-        // optionally, configure the reporter
-        coverageReporter: {
-            reporters: [
-                {type: 'lcov', dir: 'build/coverage', subdir: '.'},
-                {type: 'json', dir: 'build/coverage'},
-                {type: 'html', dir: 'build/coverage'}
-            ]
-        },
+    // optionally, configure the reporter
+    coverageReporter: {
+      reporters: [
+        {type: 'lcov', dir: 'build/coverage', subdir: '.'},
+        {type: 'json', dir: 'build/coverage'},
+        {type: 'html', dir: 'build/coverage'}
+      ]
+    },
 
-        // test results reporter to use
-        // possible values: 'dots', 'progress', 'junit'
-        reporters: ['progress', 'coverage'],
+    // test results reporter to use
+    // possible values: 'dots', 'progress', 'junit'
+    reporters: ['progress', 'coverage'],
 
-        // the configure thresholds
-        thresholdReporter: {
-            statements: 100,
-            branches: 100,
-            functions: 100,
-            lines: 100
-        },
+    // the configure thresholds
+    thresholdReporter: {
+      statements: 100,
+      branches: 100,
+      functions: 100,
+      lines: 100
+    },
 
-        // web server port
-        port: 9876,
+    // web server port
+    port: 9876,
 
-        // cli runner port
-        runnerPort: 9100,
+    // cli runner port
+    runnerPort: 9100,
 
-        // enable / disable colors in the output (reporters and logs)
-        colors: true,
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
 
-        // level of logging
-        // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-        logLevel: config.LOG_INFO,
+    // level of logging
+    // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
-        // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: false,
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: false,
 
-        // Start these browsers, currently available:
-        // - Chrome
-        // - ChromeCanary
-        // - Firefox
-        // - Opera
-        // - Safari (only Mac)
-        // - PhantomJS
-        // - IE (only Windows)
-        browsers: ['PhantomJS'],
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    browsers: ['PhantomJS'],
 
-        // If browser does not capture in given timeout [ms], kill it
-        captureTimeout: 60000,
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
 
-        // Continuous Integration mode
-        // if true, it capture browsers, run tests and exit
-        singleRun: false
-    })
-};
+    // Continuous Integration mode
+    // if true, it capture browsers, run tests and exit
+    singleRun: false
+  })
+}

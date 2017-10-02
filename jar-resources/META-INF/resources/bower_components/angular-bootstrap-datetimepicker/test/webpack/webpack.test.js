@@ -9,18 +9,18 @@
 
 require('angular');
 describe('webpack require', function () {
-    'use strict';
+  'use strict';
 
-    function loadDateTimePicker() {
-        angular.module('ui.bootstrap.datetimepicker');
-    }
+  function loadDateTimePicker () {
+    angular.module('ui.bootstrap.datetimepicker');
+  }
 
-    it('should throw an error if the module is not defined', function () {
-        expect(loadDateTimePicker).toThrow();
-    });
+  it('should throw an error if the module is not defined', function () {
+    expect(loadDateTimePicker).toThrow();
+  });
 
-    it('should be available when required', function () {
-        require('../../');
-        expect(loadDateTimePicker).not.toThrow();
-    });
+  it('should be available when required', function () {
+    require('../../');
+    expect(loadDateTimePicker).not.toThrow();
+  });
 });

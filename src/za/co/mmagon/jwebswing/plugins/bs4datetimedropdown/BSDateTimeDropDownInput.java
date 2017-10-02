@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
+package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
 import za.co.mmagon.jwebswing.base.html.Italic;
 import za.co.mmagon.jwebswing.base.html.Span;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimeinput.BSDateTimeInput;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSComponentInputGroupOptions;
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGroup;

@@ -9,18 +9,18 @@
 
 require('angular');
 describe('webpack require', function () {
-    'use strict';
+  'use strict';
 
-    function loadDateTimeInput() {
-        angular.module('ui.dateTimeInput');
-    }
+  function loadDateTimeInput () {
+    angular.module('ui.dateTimeInput');
+  }
 
-    it('should throw an error if the module is not defined', function () {
-        expect(loadDateTimeInput).toThrow();
-    });
+  it('should throw an error if the module is not defined', function () {
+    expect(loadDateTimeInput).toThrow();
+  });
 
-    it('should be available when required', function () {
-        require('../../');
-        expect(loadDateTimeInput).not.toThrow();
-    });
+  it('should be available when required', function () {
+    require('../../');
+    expect(loadDateTimeInput).not.toThrow();
+  });
 });

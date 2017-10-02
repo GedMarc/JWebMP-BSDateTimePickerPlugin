@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-bootstrap-datetimepicker": "https://github.com/dalelotts/angular-bootstrap-datetimepicker.git#1.1.3",
-    "angular-date-time-input": "https://github.com/dalelotts/angular-date-time-input.git#^1.2.1"
+    "angular-bootstrap-datetimepicker": "https://github.com/dalelotts/angular-bootstrap-datetimepicker.git#*",
+    "angular-date-time-input": "https://github.com/dalelotts/angular-date-time-input.git#*"
   }
 }

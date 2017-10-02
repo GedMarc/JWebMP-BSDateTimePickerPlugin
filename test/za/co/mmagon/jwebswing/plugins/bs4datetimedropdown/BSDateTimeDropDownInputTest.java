@@ -13,26 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
-
-import org.junit.jupiter.api.Test;
+package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
 /**
  * @author GedMarc
  */
-public class BSDateTimeDropDownTest
+public class BSDateTimeDropDownInputTest
 {
 	
-	public BSDateTimeDropDownTest()
+	public BSDateTimeDropDownInputTest()
 	{
-	}
-	
-	@Test
-	public void testSomeMethod()
-	{
-		BSDateTimeDropDown dropdown = new BSDateTimeDropDown("data.date");
-		
-		System.out.println(dropdown.toString(true));
 	}
 
 }

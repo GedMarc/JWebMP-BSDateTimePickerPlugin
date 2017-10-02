@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimedropdown;
+package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
