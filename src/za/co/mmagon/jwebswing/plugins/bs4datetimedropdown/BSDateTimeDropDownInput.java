@@ -25,6 +25,8 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSComponentInp
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGroup;
 import za.co.mmagon.jwebswing.plugins.glyphicons.Glyphicons;
 
+import java.util.Objects;
+
 /**
  * @author GedMarc
  * @since 07 Feb 2017
@@ -149,16 +151,38 @@ public class BSDateTimeDropDownInput
 			{
 				iconSpan.add(icon);
 				icon.addClass(getIconClass());
-				//iconSpan.addClass(BSComponentInputGroupOptions.Input_Group_Addon.toString());
 				iconSpan.addClass("input-group-addon");
-				//iconSpan.addAttribute("style", "line-height:2;");
 			}
 			getInputGroup().add(iconSpan);
-			//getDropdownButton().removeClass("btn");
 			getDropdownButton().add(getInputGroup());
 			
 		}
 		super.preConfigure();
 	}
-
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof BSDateTimeDropDownInput))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+		BSDateTimeDropDownInput that = (BSDateTimeDropDownInput) o;
+		return Objects.equals(getInputGroup(), that.getInputGroup()) &&
+				Objects.equals(getInputComponent(), that.getInputComponent());
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), getInputGroup(), getInputComponent());
+	}
 }

@@ -21,27 +21,39 @@ import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimeP
 import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
 
+import java.util.Objects;
+
 /**
  * @author GedMarc
  * @since 07 Feb 2017
  */
 @ComponentInformation(name = "Bootstrap DateTime Dropdown", description = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
 		url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
-public class BSDateTimeDropDown extends BSDropDown
+public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropDown<J>
 {
 	
 	private static final long serialVersionUID = 1L;
-	
+	/**
+	 * The physical date picker
+	 */
 	private BSDateTimePicker datePicker;
-	
+	/**
+	 * The options for the date picker
+	 */
 	private BSDateTimePickerConfigOptions options;
-	
+	/**
+	 * The variable name for the picker
+	 */
 	private String variableName;
 	
+	/**
+	 * Constructs a new date time drop down bound to the variable name
+	 * @param variableName
+	 */
 	public BSDateTimeDropDown(String variableName)
 	{
 		setDatePicker(new BSDateTimePicker(variableName));
-		this.variableName = variableName;
+		setVariableName(variableName);
 		BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
 	}
 	
@@ -142,5 +154,30 @@ public class BSDateTimeDropDown extends BSDropDown
 	{
 		this.variableName = variableName;
 	}
-
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof BSDateTimeDropDown))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+		BSDateTimeDropDown<?> that = (BSDateTimeDropDown<?>) o;
+		return Objects.equals(getDatePicker(), that.getDatePicker()) &&
+				Objects.equals(getVariableName(), that.getVariableName());
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), getDatePicker(), getVariableName());
+	}
 }

@@ -17,7 +17,6 @@
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
 
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * All the options
@@ -39,18 +38,6 @@ public class BSDateTimePickerOptions extends JavaScriptPart
 	 */
 	public BSDateTimePickerOptions()
 	{
-	
+		//Nothing Needed
 	}
-	
-	/**
-	 * Render as javascript
-	 *
-	 * @return
-	 */
-	@Override
-	public JavascriptPartType getJavascriptType()
-	{
-		return JavascriptPartType.Javascript;
-	}
-
 }

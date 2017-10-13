@@ -17,7 +17,6 @@
 package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
 
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
 
@@ -51,8 +50,6 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 	{
 		setTag("datetimepicker");
 		addAttribute(AngularAttributes.ngModel, variableName);
-		BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
-		//setInlineClosingTag(true);
 	}
 	
 	/**
@@ -64,7 +61,7 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 	 */
 	public J setRequired(boolean required)
 	{
-		addAttribute(AngularAttributes.ngRequired, required + "");
+		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));
 		return (J) this;
 	}
 	

@@ -64,6 +64,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	
 	public BSDateTimePickerConfigOptions()
 	{
+		//Nothing Needed
 	}
 	
 	/**
@@ -83,6 +84,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	public BSDateTimePickerConfigOptions setDropdownSelector(String dropdownSelector)
 	{
 		this.dropdownSelector = dropdownSelector;
