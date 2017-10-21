@@ -54,7 +54,6 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	{
 		setDatePicker(new BSDateTimePicker(variableName));
 		setVariableName(variableName);
-		BSDateTimePageConfigurator.setBSDateTimeRequired(this, true);
 	}
 	
 	@Override
