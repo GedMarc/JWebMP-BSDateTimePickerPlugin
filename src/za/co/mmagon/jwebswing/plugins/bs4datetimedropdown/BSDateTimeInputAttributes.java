@@ -17,6 +17,7 @@
 package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
+import za.co.mmagon.jwebswing.utilities.StaticStrings;
 
 /**
  * @author GedMarc
@@ -34,7 +35,7 @@ public enum BSDateTimeInputAttributes implements AttributeDefinitions
 	@Override
 	public String toString()
 	{
-		return "data-" + super.toString().toLowerCase().replace('_', '-');
+		return "data-" + super.toString().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, '-');
 	}
 	
 	@Override
