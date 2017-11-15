@@ -59,6 +59,7 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setRequired(boolean required)
 	{
 		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));

@@ -2,6 +2,7 @@
 *.dat
 *.gz
 **/*.iml
+*.iml
 *.log
 *.out
 *.pid
