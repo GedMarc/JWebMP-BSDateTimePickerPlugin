@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,6 +19,8 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 import za.co.mmagon.jwebswing.utilities.StaticStrings;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
+
 /**
  * @author GedMarc
  * @since 27 Jan 2017
@@ -26,18 +28,18 @@ import za.co.mmagon.jwebswing.utilities.StaticStrings;
 public enum BSDateTimeInputAttributes implements AttributeDefinitions
 {
 	Date_Time_Input,;
-	
+
 	BSDateTimeInputAttributes()
 	{
-	
+
 	}
-	
+
 	@Override
 	public String toString()
 	{
-		return "data-" + super.toString().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, '-');
+		return "data-" + super.toString().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
 	}
-	
+
 	@Override
 	public boolean isKeyword()
 	{
