@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,6 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
 
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePicker;
-import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
 
 import java.util.Objects;
@@ -31,7 +30,7 @@ import java.util.Objects;
 		url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropDown<J>
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The physical date picker
@@ -45,9 +44,10 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	 * The variable name for the picker
 	 */
 	private String variableName;
-	
+
 	/**
 	 * Constructs a new date time drop down bound to the variable name
+	 *
 	 * @param variableName
 	 */
 	public BSDateTimeDropDown(String variableName)
@@ -55,7 +55,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		setDatePicker(new BSDateTimePicker(variableName));
 		setVariableName(variableName);
 	}
-	
+
 	@Override
 	public void preConfigure()
 	{
@@ -63,16 +63,14 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		{
 			getOptions().setDropdownSelector(getDropdownButton());
 			getDatePicker().addAttribute("data-datetimepicker-config", getOptions().toString().replace('\"', '\'').replace("\r", "").replace("\n", "").replace("\t", "").replace("  ", ""));
-			
-			if (BootstrapPageConfigurator.isBootstrap4())
-			{
-				addClass("show");
-			}
+
+			addClass("show");
+
 		}
-		
+
 		super.preConfigure();
 	}
-	
+
 	/**
 	 * Return the date picker
 	 *
@@ -86,7 +84,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		}
 		return datePicker;
 	}
-	
+
 	/**
 	 * Sets the date picker
 	 *
@@ -104,11 +102,11 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		if (this.datePicker != null)
 		{
 			getDropdownMenu().add(this.datePicker);
-			
+
 		}
 		return this;
 	}
-	
+
 	/**
 	 * Gets the options for this component
 	 *
@@ -123,7 +121,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		}
 		return options;
 	}
-	
+
 	/**
 	 * Sets the options of this component
 	 *
@@ -133,7 +131,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	{
 		this.options = options;
 	}
-	
+
 	/**
 	 * Gets the variable name for this component
 	 *
@@ -143,7 +141,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	{
 		return variableName;
 	}
-	
+
 	/**
 	 * Sets the variable name of the component
 	 *
@@ -153,7 +151,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	{
 		this.variableName = variableName;
 	}
-	
+
 	@Override
 	public boolean equals(Object o)
 	{
@@ -171,9 +169,9 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 		}
 		BSDateTimeDropDown<?> that = (BSDateTimeDropDown<?>) o;
 		return Objects.equals(getDatePicker(), that.getDatePicker()) &&
-				Objects.equals(getVariableName(), that.getVariableName());
+				       Objects.equals(getVariableName(), that.getVariableName());
 	}
-	
+
 	@Override
 	public int hashCode()
 	{
