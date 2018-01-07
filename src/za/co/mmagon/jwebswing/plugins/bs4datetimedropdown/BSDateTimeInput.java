@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -31,9 +31,9 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
 public class BSDateTimeInput<J extends BSDateTimeInput>
 		extends BSInput
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * The default date time input with the given display format (required)
 	 *
@@ -43,10 +43,10 @@ public class BSDateTimeInput<J extends BSDateTimeInput>
 	public BSDateTimeInput(String dateDisplayFormat, String variableName)
 	{
 		addAttribute(BSDateTimeInputAttributes.Date_Time_Input, dateDisplayFormat);
-		AngularPageConfigurator.setRequired(this, true);
+		AngularPageConfigurator.setRequired(true);
 		bind(variableName);
 	}
-	
+
 	/**
 	 * Sets the display form of this input
 	 *
