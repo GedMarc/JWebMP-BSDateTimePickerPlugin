@@ -14,36 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
-import za.co.mmagon.jwebswing.utilities.StaticStrings;
-
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author GedMarc
- * @since 27 Jan 2017
  */
-public enum BSDateTimeInputAttributes implements AttributeDefinitions
+public class BSDateTimeDropDownTest
 {
-	Date_Time_Input,;
 
-	BSDateTimeInputAttributes()
+	public BSDateTimeDropDownTest()
 	{
-
 	}
 
-	@Override
-	public String toString()
+	@Test
+	public void testSomeMethod()
 	{
-		return "data-" + super.toString().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
-	}
+		BSDateTimeDropDown dropdown = new BSDateTimeDropDown("data.date");
 
-	@Override
-	public boolean isKeyword()
-	{
-		return false;
+		System.out.println(dropdown.toString(true));
 	}
 
 }

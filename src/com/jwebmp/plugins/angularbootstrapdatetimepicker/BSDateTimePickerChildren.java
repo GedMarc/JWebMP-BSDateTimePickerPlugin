@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,16 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface BSDateTimePickerFeatures extends GlobalFeatures
+public interface BSDateTimePickerChildren
+		extends GlobalChildren
 {
 
 }

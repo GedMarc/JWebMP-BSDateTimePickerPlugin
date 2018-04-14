@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
+import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
 
 /**
  * @author GedMarc
@@ -38,27 +38,31 @@ import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimeP
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BSDateTimePickerPlugin.jar/download",
 		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
-		pluginLastUpdatedDate = "2017/03/04"
-)
-public class BSDateTimePageConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/03/04")
+public class BSDateTimePageConfigurator
+		extends PageConfigurator
 {
-	
+
 	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
 	private static final long serialVersionUID = 1L;
-	
+
 	public BSDateTimePageConfigurator()
 	{
 		//Nothing needed
 	}
-	
+
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			page.getAngular().getAngularModules().add(new BSDateTimePickerAngularModule(page.getBody()));
-			page.getAngular().getAngularModules().add(new BSDateTimePickerInputAngularModule(page.getBody()));
-			
+			page.getAngular()
+			    .getAngularModules()
+			    .add(new BSDateTimePickerAngularModule(page.getBody()));
+			page.getAngular()
+			    .getAngularModules()
+			    .add(new BSDateTimePickerInputAngularModule(page.getBody()));
+
 		}
 		return page;
 	}

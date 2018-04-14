@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,30 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.base.angular.modules.AngularModuleBase;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.utilities.StaticStrings;
+
+import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
 
 /**
  * @author GedMarc
  * @since 27 Jan 2017
  */
-public class BSDateTimePickerInputAngularModule extends AngularModuleBase
+public enum BSDateTimeInputAttributes
+		implements AttributeDefinitions
 {
-	
-	private static final long serialVersionUID = 1L;
-	
-	public BSDateTimePickerInputAngularModule(ComponentHierarchyBase page)
+	Date_Time_Input,;
+
+	BSDateTimeInputAttributes()
 	{
-		super("ui.dateTimeInput");
-		page.getJavascriptReferences().add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
+
 	}
-	
+
 	@Override
-	public String renderFunction()
+	public String toString()
 	{
-		return "";
+		return "data-" + super.toString()
+		                      .toLowerCase()
+		                      .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
 	}
+
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
+
 }

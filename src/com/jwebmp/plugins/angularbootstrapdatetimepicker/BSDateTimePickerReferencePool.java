@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import za.co.mmagon.jwebswing.base.references.CSSReference;
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
+import com.jwebmp.base.references.CSSReference;
+import com.jwebmp.base.references.JavascriptReference;
+import com.jwebmp.base.servlets.interfaces.ReferencePool;
 
 /**
  * Default reference pool structure
@@ -45,14 +45,14 @@ public enum BSDateTimePickerReferencePool implements ReferencePool
 	 * The actual css reference
 	 */
 	private CSSReference cssReference;
-	
+
 	/**
 	 * Constructs a reference pool
 	 */
 	BSDateTimePickerReferencePool()
 	{
 	}
-	
+
 	/**
 	 * Constructs a new reference pool
 	 *
@@ -64,29 +64,7 @@ public enum BSDateTimePickerReferencePool implements ReferencePool
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;
 	}
-	
-	/**
-	 * Returns the javascript reference
-	 *
-	 * @return
-	 */
-	@Override
-	public JavascriptReference getJavaScriptReference()
-	{
-		return javaScriptReference;
-	}
-	
-	/**
-	 * Sets the javascript reference
-	 *
-	 * @param javaScriptReference
-	 */
-	@Override
-	public void setJavaScriptReference(JavascriptReference javaScriptReference)
-	{
-		this.javaScriptReference = javaScriptReference;
-	}
-	
+
 	/**
 	 * Gets the cSS reference
 	 *
@@ -97,7 +75,7 @@ public enum BSDateTimePickerReferencePool implements ReferencePool
 	{
 		return cssReference;
 	}
-	
+
 	/**
 	 * Sets the CSS Reference
 	 *
@@ -107,5 +85,27 @@ public enum BSDateTimePickerReferencePool implements ReferencePool
 	public void setCssReference(CSSReference cssReference)
 	{
 		this.cssReference = cssReference;
+	}
+
+	/**
+	 * Returns the javascript reference
+	 *
+	 * @return
+	 */
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
+
+	/**
+	 * Sets the javascript reference
+	 *
+	 * @param javaScriptReference
+	 */
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
 	}
 }

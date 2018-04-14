@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import za.co.mmagon.jwebswing.Component;
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.Component;
+import com.jwebmp.Feature;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
@@ -27,13 +27,15 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
  * @version 1.0
  * @since 2013/01/16
  */
-public class BSDateTimePickerFeature extends Feature<BSDateTimePickerOptions, BSDateTimePickerFeature> implements BSDateTimePickerFeatures, GlobalFeatures
+public class BSDateTimePickerFeature
+		extends Feature<BSDateTimePickerOptions, BSDateTimePickerFeature>
+		implements BSDateTimePickerFeatures, GlobalFeatures
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private BSDateTimePickerOptions options;
-	
+
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
 	 * <p>
@@ -45,32 +47,15 @@ public class BSDateTimePickerFeature extends Feature<BSDateTimePickerOptions, BS
 		super("Blank");
 		setComponent(forComponent);
 	}
-	
-	/**
-	 * Returns all the tooltip options
-	 * <p>
-	 *
-	 * @return
-	 */
+
 	@Override
-	public BSDateTimePickerOptions getOptions()
+	public int hashCode()
 	{
-		if (options == null)
-		{
-			options = new BSDateTimePickerOptions();
-		}
-		return options;
+		int hash = 7;
+		hash = 79 * hash + (getID().hashCode());
+		return hash;
 	}
-	
-	@Override
-	public void assignFunctionsToComponent()
-	{
-		String requiredString = getComponent().getJQueryID() + "blank(";
-		requiredString += getOptions().toString();
-		requiredString += ");" + getNewLine();
-		addQuery(requiredString);
-	}
-	
+
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -88,12 +73,29 @@ public class BSDateTimePickerFeature extends Feature<BSDateTimePickerOptions, BS
 		}
 		return super.equals(obj);
 	}
-	
+
+	/**
+	 * Returns all the tooltip options
+	 * <p>
+	 *
+	 * @return
+	 */
 	@Override
-	public int hashCode()
+	public BSDateTimePickerOptions getOptions()
 	{
-		int hash = 7;
-		hash = 79 * hash + (this.getID().hashCode());
-		return hash;
+		if (options == null)
+		{
+			options = new BSDateTimePickerOptions();
+		}
+		return options;
+	}
+
+	@Override
+	public void assignFunctionsToComponent()
+	{
+		String requiredString = getComponent().getJQueryID() + "blank(";
+		requiredString += getOptions().toString();
+		requiredString += ");" + getNewLine();
+		addQuery(requiredString);
 	}
 }

@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker.BSDateTimePicker;
-import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.BSDropDown;
+import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePicker;
+import com.jwebmp.plugins.bootstrap.dropdown.BSDropDown;
 
 import java.util.Objects;
 
@@ -26,9 +26,12 @@ import java.util.Objects;
  * @author GedMarc
  * @since 07 Feb 2017
  */
-@ComponentInformation(name = "Bootstrap DateTime Dropdown", description = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
-		url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
-public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropDown<J>
+@ComponentInformation(name = "Bootstrap DateTime Dropdown",
+		description = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
+		url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker",
+		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>>
+		extends BSDropDown<J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -57,18 +60,73 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	}
 
 	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof BSDateTimeDropDown))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+		BSDateTimeDropDown<?> that = (BSDateTimeDropDown<?>) o;
+		return Objects.equals(getDatePicker(), that.getDatePicker()) && Objects.equals(getVariableName(), that.getVariableName());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), getDatePicker(), getVariableName());
+	}
+
+	@Override
 	public void preConfigure()
 	{
 		if (!isConfigured())
 		{
 			getOptions().setDropdownSelector(getDropdownButton());
-			getDatePicker().addAttribute("data-datetimepicker-config", getOptions().toString().replace('\"', '\'').replace("\r", "").replace("\n", "").replace("\t", "").replace("  ", ""));
+			getDatePicker().addAttribute("data-datetimepicker-config", getOptions().toString()
+			                                                                       .replace('\"', '\'')
+			                                                                       .replace("\r", "")
+			                                                                       .replace("\n", "")
+			                                                                       .replace("\t", "")
+			                                                                       .replace("  ", ""));
 
 			addClass("show");
 
 		}
 
 		super.preConfigure();
+	}
+
+	/**
+	 * Gets the options for this component
+	 *
+	 * @return
+	 */
+	@Override
+	public BSDateTimePickerConfigOptions getOptions()
+	{
+		if (options == null)
+		{
+			options = new BSDateTimePickerConfigOptions();
+		}
+		return options;
+	}
+
+	/**
+	 * Sets the options of this component
+	 *
+	 * @param options
+	 */
+	public void setOptions(BSDateTimePickerConfigOptions options)
+	{
+		this.options = options;
 	}
 
 	/**
@@ -108,31 +166,6 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	}
 
 	/**
-	 * Gets the options for this component
-	 *
-	 * @return
-	 */
-	@Override
-	public BSDateTimePickerConfigOptions getOptions()
-	{
-		if (options == null)
-		{
-			this.options = new BSDateTimePickerConfigOptions();
-		}
-		return options;
-	}
-
-	/**
-	 * Sets the options of this component
-	 *
-	 * @param options
-	 */
-	public void setOptions(BSDateTimePickerConfigOptions options)
-	{
-		this.options = options;
-	}
-
-	/**
 	 * Gets the variable name for this component
 	 *
 	 * @return
@@ -150,31 +183,5 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>> extends BSDropD
 	public void setVariableName(String variableName)
 	{
 		this.variableName = variableName;
-	}
-
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof BSDateTimeDropDown))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-		BSDateTimeDropDown<?> that = (BSDateTimeDropDown<?>) o;
-		return Objects.equals(getDatePicker(), that.getDatePicker()) &&
-				       Objects.equals(getVariableName(), that.getVariableName());
-	}
-
-	@Override
-	public int hashCode()
-	{
-		return Objects.hash(super.hashCode(), getDatePicker(), getVariableName());
 	}
 }

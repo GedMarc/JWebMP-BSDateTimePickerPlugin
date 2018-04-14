@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,30 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.ComponentHierarchyBase;
+import com.jwebmp.base.angular.modules.AngularModuleBase;
+import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
 
 /**
- * All the options
- * <p>
- *
  * @author GedMarc
- * @version 1.0
- * <p>
- * <p>
- * @since Mar 4, 2015
+ * @since 27 Jan 2017
  */
-public class BSDateTimePickerOptions extends JavaScriptPart
+public class BSDateTimePickerInputAngularModule
+		extends AngularModuleBase
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
-	/**
-	 * The options for the component
-	 */
-	public BSDateTimePickerOptions()
+
+	public BSDateTimePickerInputAngularModule(ComponentHierarchyBase page)
 	{
-		//Nothing Needed
+		super("ui.dateTimeInput");
+		page.getJavascriptReferences()
+		    .add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
+	}
+
+	@Override
+	public String renderFunction()
+	{
+		return "";
 	}
 }

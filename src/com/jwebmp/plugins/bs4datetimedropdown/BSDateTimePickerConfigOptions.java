@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,18 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.ComponentHierarchyBase;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
  * @author GedMarc
  * @since 07 Feb 2017
  */
-public class BSDateTimePickerConfigOptions extends JavaScriptPart
+public class BSDateTimePickerConfigOptions
+		extends JavaScriptPart
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The actual drop down selector
@@ -38,7 +39,8 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	 * <p>
 	 * The view that the datetimepicker should show when it is opened. Accepts values of :
 	 * <p>
-	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for
+	 * date-of-birth
 	 * datetimepickers.
 	 * <p>
 	 */
@@ -61,12 +63,12 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	 * The increment used to build the hour view. A button is created for each minuteStep minutes.
 	 */
 	private Integer minuteStep;
-	
+
 	public BSDateTimePickerConfigOptions()
 	{
 		//Nothing Needed
 	}
-	
+
 	/**
 	 * The id the selector (with #)
 	 *
@@ -76,7 +78,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		return dropdownSelector;
 	}
-	
+
 	/**
 	 * Sets the drop down selector directly (for class assignment etc)
 	 *
@@ -90,7 +92,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 		this.dropdownSelector = dropdownSelector;
 		return this;
 	}
-	
+
 	/**
 	 * Sets the drop down selector to a component
 	 *
@@ -103,7 +105,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 		this.dropdownSelector = dropdownSelector.getID(true);
 		return this;
 	}
-	
+
 	/**
 	 * startView
 	 * <p>
@@ -111,7 +113,8 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	 * <p>
 	 * The view that the datetimepicker should show when it is opened. Accepts values of :
 	 * <p>
-	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for
+	 * date-of-birth
 	 * datetimepickers.
 	 *
 	 * @return
@@ -120,7 +123,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		return startView;
 	}
-	
+
 	/**
 	 * startView
 	 * <p>
@@ -128,7 +131,8 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	 * <p>
 	 * The view that the datetimepicker should show when it is opened. Accepts values of :
 	 * <p>
-	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for date-of-birth
+	 * 'minute' for the minute view 'hour' for the hour view 'day' for the day view (the default) 'month' for the 12-month view 'year' for the 10-year overview. Useful for
+	 * date-of-birth
 	 * datetimepickers.
 	 *
 	 * @param startView
@@ -137,7 +141,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		this.startView = startView;
 	}
-	
+
 	/**
 	 * minView
 	 * <p>
@@ -153,7 +157,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		return minView;
 	}
-	
+
 	/**
 	 * minView
 	 * <p>
@@ -169,7 +173,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		this.minView = minView;
 	}
-	
+
 	/**
 	 * minuteStep
 	 * <p>
@@ -183,7 +187,7 @@ public class BSDateTimePickerConfigOptions extends JavaScriptPart
 	{
 		return minuteStep;
 	}
-	
+
 	/**
 	 * minuteStep
 	 * <p>

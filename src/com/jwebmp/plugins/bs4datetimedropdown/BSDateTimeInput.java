@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
-import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
+import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.plugins.bootstrap.forms.controls.BSInput;
 
 /**
  * @param <J>
@@ -26,8 +26,10 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
  * @author GedMarc
  * @since 27 Jan 2017
  */
-@ComponentInformation(name = "Bootstrap DateTime Input", description = "Allows user input of a date/time value. Valid dates are displayed in specified format, but input may be in any supported format. ",
-		url = "https://github.com/dalelotts/angular-date-time-input", wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+@ComponentInformation(name = "Bootstrap DateTime Input",
+		description = "Allows user input of a date/time value. Valid dates are displayed in specified format, but input may be in any supported format. ",
+		url = "https://github.com/dalelotts/angular-date-time-input",
+		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeInput<J extends BSDateTimeInput>
 		extends BSInput
 {

@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
-import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
+import com.jwebmp.base.angular.AngularAttributes;
+import com.jwebmp.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
+import com.jwebmp.plugins.bootstrap.forms.controls.BSInput;
 
 /**
  * An implementation of
@@ -34,13 +34,13 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 		extends BSInput//<BSDateTimePickerChildren, BSDateTimePickerAttributes, BSDateTimePickerFeatures, BSDateTimePickerEvents, J>
 		implements BSDropDownMenuChildren
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The associated feature
 	 */
 	private BSDateTimePickerFeature feature;
-	
+
 	/**
 	 * Constructs a new instance
 	 *
@@ -51,7 +51,7 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 		setTag("datetimepicker");
 		addAttribute(AngularAttributes.ngModel, variableName);
 	}
-	
+
 	/**
 	 * Sets this picker as required
 	 *
@@ -65,7 +65,18 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));
 		return (J) this;
 	}
-	
+
+	/**
+	 * Returns the options if any is required
+	 *
+	 * @return
+	 */
+	@Override
+	public BSDateTimePickerOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
+
 	/**
 	 * Returns the feature if any is required
 	 *
@@ -79,18 +90,15 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 		}
 		return feature;
 	}
-	
-	/**
-	 * Returns the options if any is required
-	 *
-	 * @return
-	 */
+
 	@Override
-	public BSDateTimePickerOptions getOptions()
+	public int hashCode()
 	{
-		return getFeature().getOptions();
+		int hash = 7;
+		hash = 79 * hash + (getID().hashCode());
+		return hash;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -107,14 +115,6 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 			return false;
 		}
 		return super.equals(obj);
-	}
-	
-	@Override
-	public int hashCode()
-	{
-		int hash = 7;
-		hash = 79 * hash + (this.getID().hashCode());
-		return hash;
 	}
 
 }
