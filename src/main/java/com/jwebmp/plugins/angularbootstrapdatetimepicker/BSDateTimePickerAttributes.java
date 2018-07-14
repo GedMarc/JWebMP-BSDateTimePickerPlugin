@@ -16,28 +16,49 @@
  */
 package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.utilities.StaticStrings;
+
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
- * All the options
- * <p>
- *
  * @author GedMarc
- * @version 1.0
- * <p>
- * <p>
- * @since Mar 4, 2015
  */
-public class BSDateTimePickerOptions extends JavaScriptPart
+public enum BSDateTimePickerAttributes
+		implements AttributeDefinitions
 {
+	Visibility;
 
-	private static final long serialVersionUID = 1L;
+	private boolean isKeyword;
 
 	/**
-	 * The options for the component
+	 * The component attributes
 	 */
-	public BSDateTimePickerOptions()
+	BSDateTimePickerAttributes()
 	{
-		//Nothing Needed
+	}
+
+	/**
+	 * If the attribute is a keyword
+	 *
+	 * @return
+	 */
+	@Override
+	public boolean isKeyword()
+	{
+		return isKeyword;
+	}
+
+	/**
+	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
+	 *
+	 * @return
+	 */
+	@Override
+	public String toString()
+	{
+		return name().toLowerCase()
+		             .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
+		             .replace("$", "");
 	}
 }

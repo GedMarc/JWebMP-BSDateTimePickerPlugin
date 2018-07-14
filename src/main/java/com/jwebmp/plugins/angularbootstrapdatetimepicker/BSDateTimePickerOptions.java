@@ -14,39 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimedropdown;
+package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import com.jwebmp.base.html.interfaces.AttributeDefinitions;
-import com.jwebmp.utilities.StaticStrings;
-
-import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
+ * All the options
+ * <p>
+ *
  * @author GedMarc
- * @since 27 Jan 2017
+ * @version 1.0
+ * 		<p>
+ * 		<p>
+ * @since Mar 4, 2015
  */
-public enum BSDateTimeInputAttributes
-		implements AttributeDefinitions
+public class BSDateTimePickerOptions
+		extends JavaScriptPart
 {
-	Date_Time_Input,;
 
-	BSDateTimeInputAttributes()
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * The options for the component
+	 */
+	public BSDateTimePickerOptions()
 	{
-
+		//Nothing Needed
 	}
-
-	@Override
-	public String toString()
-	{
-		return "data-" + super.toString()
-		                      .toLowerCase()
-		                      .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
-	}
-
-	@Override
-	public boolean isKeyword()
-	{
-		return false;
-	}
-
 }

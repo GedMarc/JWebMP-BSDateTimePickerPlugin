@@ -26,16 +26,18 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author GedMarc
  * @since 20 Apr 2016
  */
-public enum BSDateTimePickerReferencePool implements ReferencePool
+public enum BSDateTimePickerReferencePool
+		implements ReferencePool
 {
 	BootstrapDateTimePickerReference(new JavascriptReference("datetimepickerref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"),
 	                                 new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css")),
 	BootstrapDateTimeInputReference(new JavascriptReference("datetimepickerinputref", 1.0, "bower_components/angular-date-time-input/src/dateTimeInput.js"),
 	                                //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
 	                                null),
-	BootstrapDateTimeInputTemplatesReference(new JavascriptReference("datetimepickertemplateref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"),
-	                                         //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
-	                                         null),
+	BootstrapDateTimeInputTemplatesReference(
+			new JavascriptReference("datetimepickertemplateref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"),
+			//    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
+			null),
 	NoReference(null, null);
 	/**
 	 * The actual javascript

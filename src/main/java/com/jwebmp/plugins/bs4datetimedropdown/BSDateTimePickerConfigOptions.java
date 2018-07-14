@@ -80,6 +80,19 @@ public class BSDateTimePickerConfigOptions
 	}
 
 	/**
+	 * Sets the drop down selector to a component
+	 *
+	 * @param dropdownSelector
+	 *
+	 * @return
+	 */
+	public BSDateTimePickerConfigOptions setDropdownSelector(ComponentHierarchyBase dropdownSelector)
+	{
+		this.dropdownSelector = dropdownSelector.getID(true);
+		return this;
+	}
+
+	/**
 	 * Sets the drop down selector directly (for class assignment etc)
 	 *
 	 * @param dropdownSelector
@@ -90,19 +103,6 @@ public class BSDateTimePickerConfigOptions
 	public BSDateTimePickerConfigOptions setDropdownSelector(String dropdownSelector)
 	{
 		this.dropdownSelector = dropdownSelector;
-		return this;
-	}
-
-	/**
-	 * Sets the drop down selector to a component
-	 *
-	 * @param dropdownSelector
-	 *
-	 * @return
-	 */
-	public BSDateTimePickerConfigOptions setDropdownSelector(ComponentHierarchyBase dropdownSelector)
-	{
-		this.dropdownSelector = dropdownSelector.getID(true);
 		return this;
 	}
 

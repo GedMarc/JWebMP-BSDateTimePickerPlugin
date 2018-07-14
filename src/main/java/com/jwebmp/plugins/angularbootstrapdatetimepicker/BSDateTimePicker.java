@@ -92,14 +92,6 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 	}
 
 	@Override
-	public int hashCode()
-	{
-		int hash = 7;
-		hash = 79 * hash + (getID().hashCode());
-		return hash;
-	}
-
-	@Override
 	public boolean equals(Object obj)
 	{
 		if (this == obj)
@@ -115,6 +107,14 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 			return false;
 		}
 		return super.equals(obj);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int hash = 7;
+		hash = 79 * hash + (getID().hashCode());
+		return hash;
 	}
 
 }

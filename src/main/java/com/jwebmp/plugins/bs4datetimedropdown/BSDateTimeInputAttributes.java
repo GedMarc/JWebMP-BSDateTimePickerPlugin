@@ -14,51 +14,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.angularbootstrapdatetimepicker;
+package com.jwebmp.plugins.bs4datetimedropdown;
 
 import com.jwebmp.base.html.interfaces.AttributeDefinitions;
 import com.jwebmp.utilities.StaticStrings;
 
-import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
  * @author GedMarc
+ * @since 27 Jan 2017
  */
-public enum BSDateTimePickerAttributes
+public enum BSDateTimeInputAttributes
 		implements AttributeDefinitions
 {
-	Visibility;
+	Date_Time_Input,
+	;
 
-	private boolean isKeyword;
-
-	/**
-	 * The component attributes
-	 */
-	BSDateTimePickerAttributes()
+	BSDateTimeInputAttributes()
 	{
+
 	}
 
-	/**
-	 * If the attribute is a keyword
-	 *
-	 * @return
-	 */
-	@Override
-	public boolean isKeyword()
-	{
-		return isKeyword;
-	}
-
-	/**
-	 * Returns the attribute name replacing all underscores with dashes and all dollar signs to empty
-	 *
-	 * @return
-	 */
 	@Override
 	public String toString()
 	{
-		return name().toLowerCase()
-		             .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
-		             .replace("$", "");
+		return "data-" + super.toString()
+		                      .toLowerCase()
+		                      .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
 	}
+
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
+
 }
