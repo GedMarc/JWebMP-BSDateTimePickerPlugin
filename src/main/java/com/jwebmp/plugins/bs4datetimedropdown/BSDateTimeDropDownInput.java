@@ -16,10 +16,10 @@
  */
 package com.jwebmp.plugins.bs4datetimedropdown;
 
-import com.jwebmp.base.angular.AngularAttributes;
-import com.jwebmp.base.html.Italic;
-import com.jwebmp.base.html.Span;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.angular.AngularAttributes;
+import com.jwebmp.core.base.html.Italic;
+import com.jwebmp.core.base.html.Span;
+import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
 import com.jwebmp.plugins.bootstrap.forms.groups.sets.BSComponentInputGroupOptions;
 import com.jwebmp.plugins.bootstrap.forms.groups.sets.BSFormInputGroup;

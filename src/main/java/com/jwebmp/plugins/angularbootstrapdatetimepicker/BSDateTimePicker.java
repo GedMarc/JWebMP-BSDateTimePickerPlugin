@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import com.jwebmp.base.angular.AngularAttributes;
+import com.jwebmp.core.base.angular.AngularAttributes;
 import com.jwebmp.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
 import com.jwebmp.plugins.bootstrap.forms.controls.BSInput;
 

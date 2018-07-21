@@ -16,8 +16,8 @@
  */
 package com.jwebmp.plugins.bs4datetimedropdown;
 
-import com.jwebmp.base.angular.AngularPageConfigurator;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.angular.AngularPageConfigurator;
+import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.bootstrap.forms.controls.BSInput;
 
 /**

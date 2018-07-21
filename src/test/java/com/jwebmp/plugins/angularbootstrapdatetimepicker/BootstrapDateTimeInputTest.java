@@ -22,7 +22,7 @@
  */
 package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import com.jwebmp.Page;
+import com.jwebmp.core.Page;
 import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimeInput;
 import org.junit.jupiter.api.Test;
 
