@@ -17,9 +17,9 @@
 package com.jwebmp.plugins.bs4datetimedropdown;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
-import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
 
 /**
  * @author GedMarc
@@ -40,28 +40,29 @@ import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngular
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
 		pluginLastUpdatedDate = "2017/03/04")
 public class BSDateTimePageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
-
-	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
-	private static final long serialVersionUID = 1L;
-
 	public BSDateTimePageConfigurator()
 	{
 		//Nothing needed
 	}
 
 	@Override
-	public Page configure(Page page)
+	@SuppressWarnings("unchecked")
+	public Page configure(Page<?> page)
 	{
 		if (!page.isConfigured())
 		{
-			page.getAngular()
-			    .getAngularModules()
-			    .add(new BSDateTimePickerAngularModule(page.getBody()));
-			page.getAngular()
-			    .getAngularModules()
-			    .add(new BSDateTimePickerInputAngularModule(page.getBody()));
+			page.getJavascriptReferences()
+			    .add(BSDateTimePickerReferencePool.BootstrapDateTimePickerReference.getJavaScriptReference());
+			page.getJavascriptReferences()
+			    .add(BSDateTimePickerReferencePool.BootstrapDateTimeInputTemplatesReference.getJavaScriptReference());
+			page.getJavascriptReferences()
+			    .add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
+			page.getCssReferences()
+			    .add(BSDateTimePickerReferencePool.BootstrapDateTimePickerReference.getCssReference());
+			page.getJavascriptReferences()
+			    .add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
 
 		}
 		return page;

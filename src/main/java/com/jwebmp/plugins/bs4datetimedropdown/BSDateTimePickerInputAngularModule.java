@@ -16,9 +16,8 @@
  */
 package com.jwebmp.plugins.bs4datetimedropdown;
 
-import com.jwebmp.core.base.ComponentHierarchyBase;
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
+import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * @author GedMarc
@@ -26,15 +25,14 @@ import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferen
  */
 public class BSDateTimePickerInputAngularModule
 		extends AngularModuleBase
+		implements IAngularModule<BSDateTimePickerInputAngularModule>
 {
 
 	private static final long serialVersionUID = 1L;
 
-	public BSDateTimePickerInputAngularModule(ComponentHierarchyBase page)
+	public BSDateTimePickerInputAngularModule()
 	{
 		super("ui.dateTimeInput");
-		page.getJavascriptReferences()
-		    .add(BSDateTimePickerReferencePool.BootstrapDateTimeInputReference.getJavaScriptReference());
 	}
 
 	@Override
