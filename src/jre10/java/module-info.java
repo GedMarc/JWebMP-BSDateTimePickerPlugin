@@ -19,4 +19,6 @@ module com.jwebmp.plugins.angularbootstrapdatetimepicker {
 	provides IPageConfigurator with BSDateTimePageConfigurator;
 	provides IAngularModule with BSDateTimePickerInputAngularModule, BSDateTimePickerAngularModule;
 
+	opens com.jwebmp.plugins.angularbootstrapdatetimepicker to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4datetimedropdown to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
