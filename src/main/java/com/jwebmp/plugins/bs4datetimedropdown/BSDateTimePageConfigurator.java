@@ -21,6 +21,8 @@ import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerReferencePool;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author GedMarc
  * @since 22 Feb 2017
@@ -47,6 +49,7 @@ public class BSDateTimePageConfigurator
 		//Nothing needed
 	}
 
+	@NotNull
 	@Override
 	@SuppressWarnings("unchecked")
 	public Page configure(Page<?> page)
