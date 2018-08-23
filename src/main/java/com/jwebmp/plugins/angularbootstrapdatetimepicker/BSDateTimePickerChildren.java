@@ -16,15 +16,16 @@
  */
 package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
+import com.jwebmp.core.base.ComponentBase;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface BSDateTimePickerChildren
-		extends GlobalChildren
+public interface BSDateTimePickerChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
+		extends IComponentHierarchyBase<C, J>
 {
 
 }
