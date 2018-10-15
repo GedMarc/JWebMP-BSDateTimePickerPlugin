@@ -34,7 +34,7 @@ import java.util.Objects;
 @ComponentInformation(name = "Bootstrap DateTime Input",
 		description = "Displays a drop down with the date time input and a selector for the date time picker ",
 		url = "https://github.com/dalelotts/angular-date-time-input",
-		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+		wikiUrl = "https://github.com/GedMarc/JWebMP-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDownInput
 		extends BSDateTimeDropDown
 		implements BSDropDownMenuChildren

@@ -29,7 +29,7 @@ import java.util.Objects;
 @ComponentInformation(name = "Bootstrap DateTime Dropdown",
 		description = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
 		url = "https://github.com/dalelotts/angular-bootstrap-datetimepicker",
-		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+		wikiUrl = "https://github.com/GedMarc/JWebMP-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>>
 		extends BSDropDown<J>
 {

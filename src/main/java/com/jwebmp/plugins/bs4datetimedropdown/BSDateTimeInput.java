@@ -29,7 +29,7 @@ import com.jwebmp.plugins.bootstrap.forms.controls.BSInput;
 @ComponentInformation(name = "Bootstrap DateTime Input",
 		description = "Allows user input of a date/time value. Valid dates are displayed in specified format, but input may be in any supported format. ",
 		url = "https://github.com/dalelotts/angular-date-time-input",
-		wikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki")
+		wikiUrl = "https://github.com/GedMarc/JWebMP-BSDateTimePickerPlugin/wiki")
 public class BSDateTimeInput<J extends BSDateTimeInput>
 		extends BSInput
 {
