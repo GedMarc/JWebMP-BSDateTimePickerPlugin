@@ -34,7 +34,6 @@ public class BSDateTimeInput<J extends BSDateTimeInput>
 		extends BSInput
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * The default date time input with the given display format (required)

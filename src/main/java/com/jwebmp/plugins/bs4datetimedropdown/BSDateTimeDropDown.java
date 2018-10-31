@@ -34,7 +34,7 @@ public class BSDateTimeDropDown<J extends BSDateTimeDropDown<J>>
 		extends BSDropDown<J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The physical date picker
 	 */

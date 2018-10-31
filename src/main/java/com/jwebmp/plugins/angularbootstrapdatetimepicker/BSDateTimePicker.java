@@ -35,7 +35,7 @@ public class BSDateTimePicker<J extends BSDateTimePicker>
 		implements BSDropDownMenuChildren
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The associated feature
 	 */

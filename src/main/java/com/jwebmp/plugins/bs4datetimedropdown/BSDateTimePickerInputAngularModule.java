@@ -28,7 +28,6 @@ public class BSDateTimePickerInputAngularModule
 		implements IAngularModule<BSDateTimePickerInputAngularModule>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	public BSDateTimePickerInputAngularModule()
 	{

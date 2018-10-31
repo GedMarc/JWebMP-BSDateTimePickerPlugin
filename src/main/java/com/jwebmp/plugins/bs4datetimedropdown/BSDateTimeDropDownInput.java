@@ -40,7 +40,7 @@ public class BSDateTimeDropDownInput
 		implements BSDropDownMenuChildren
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Any input group options
 	 */
