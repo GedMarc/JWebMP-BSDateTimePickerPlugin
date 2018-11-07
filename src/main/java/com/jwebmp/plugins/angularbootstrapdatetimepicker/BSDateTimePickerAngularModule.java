@@ -18,6 +18,7 @@ package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
 import com.jwebmp.core.base.angular.services.IAngularModule;
+import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
 
 /**
  * @author GedMarc
@@ -39,5 +40,16 @@ public class BSDateTimePickerAngularModule
 	public String renderFunction()
 	{
 		return "";
+	}
+
+	/**
+	 * If this page configurator is enabled
+	 *
+	 * @return if the configuration must run
+	 */
+	@Override
+	public boolean enabled()
+	{
+		return BSDateTimePageConfigurator.isEnabled();
 	}
 }
