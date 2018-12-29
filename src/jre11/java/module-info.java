@@ -19,6 +19,7 @@ module com.jwebmp.plugins.angularbootstrapdatetimepicker {
 	requires com.jwebmp.plugins.bootstrap;
 	requires com.jwebmp.plugins.glyphicons;
 	requires com.jwebmp.guicedinjection;
+	requires com.jwebmp.core.angularjs;
 
 	provides IPageConfigurator with BSDateTimePageConfigurator;
 	provides IAngularModule with BSDateTimePickerInputAngularModule, BSDateTimePickerAngularModule;

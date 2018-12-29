@@ -17,18 +17,14 @@
 package com.jwebmp.plugins.bs4datetimedropdown;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * @author GedMarc
  * @since 27 Jan 2017
  */
 public class BSDateTimePickerInputAngularModule
-		extends AngularModuleBase
-		implements IAngularModule<BSDateTimePickerInputAngularModule>
+		extends AngularModuleBase<BSDateTimePickerInputAngularModule>
 {
-
-
 	public BSDateTimePickerInputAngularModule()
 	{
 		super("ui.dateTimeInput");

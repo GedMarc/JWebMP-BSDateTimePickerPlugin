@@ -17,7 +17,6 @@
 package com.jwebmp.plugins.angularbootstrapdatetimepicker;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.core.base.angular.services.IAngularModule;
 import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
 
 /**
@@ -25,11 +24,8 @@ import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
  * @since 27 Jan 2017
  */
 public class BSDateTimePickerAngularModule
-		extends AngularModuleBase
-		implements IAngularModule<BSDateTimePickerAngularModule>
+		extends AngularModuleBase<BSDateTimePickerAngularModule>
 {
-
-
 	@SuppressWarnings("unchecked")
 	public BSDateTimePickerAngularModule()
 	{
