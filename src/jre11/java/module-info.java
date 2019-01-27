@@ -1,12 +1,3 @@
-import com.jwebmp.core.base.angular.services.IAngularModule;
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
-import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
-import com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePickerInputAngularModule;
-import com.jwebmp.plugins.bs4datetimedropdown.implementations.BSDateTimePickerExclusionsModule;
-
 module com.jwebmp.plugins.angularbootstrapdatetimepicker {
 	exports com.jwebmp.plugins.angularbootstrapdatetimepicker;
 	exports com.jwebmp.plugins.bs4datetimedropdown;
@@ -21,11 +12,11 @@ module com.jwebmp.plugins.angularbootstrapdatetimepicker {
 	requires com.jwebmp.guicedinjection;
 	requires com.jwebmp.core.angularjs;
 
-	provides IPageConfigurator with BSDateTimePageConfigurator;
-	provides IAngularModule with BSDateTimePickerInputAngularModule, BSDateTimePickerAngularModule;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePageConfigurator;
+	provides com.jwebmp.core.base.angular.services.IAngularModule with com.jwebmp.plugins.bs4datetimedropdown.BSDateTimePickerInputAngularModule, com.jwebmp.plugins.angularbootstrapdatetimepicker.BSDateTimePickerAngularModule;
 
-	provides IGuiceScanModuleExclusions with BSDateTimePickerExclusionsModule;
-	provides IGuiceScanJarExclusions with BSDateTimePickerExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.bs4datetimedropdown.implementations.BSDateTimePickerExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.bs4datetimedropdown.implementations.BSDateTimePickerExclusionsModule;
 
 	opens com.jwebmp.plugins.angularbootstrapdatetimepicker to com.fasterxml.jackson.databind, com.jwebmp.core;
 	opens com.jwebmp.plugins.bs4datetimedropdown to com.fasterxml.jackson.databind, com.jwebmp.core;
